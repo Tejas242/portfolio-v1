@@ -1,8 +1,21 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
+import { Lora } from "next/font/google";
+import { Ubuntu } from "next/font/google";
 import "./globals.css";
+import Navbar from "@/components/Navbar";
 
 const inter = Inter({ subsets: ["latin"] });
+const ubuntu = Ubuntu({
+  subsets: ["cyrillic"],
+  weight: "400",
+  variable: "--font-ubuntu"
+});
+const lora = Lora({
+  subsets: ["latin"],
+  weight: "400",
+  variable: "--font-lora"
+})
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -16,7 +29,12 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={inter.className}>{children}</body>
+      <body
+        className={`${inter.className} ${lora.variable} ${ubuntu.variable} bg-background`}
+      >
+        <Navbar />
+        {children}
+      </body>
     </html>
   );
 }
