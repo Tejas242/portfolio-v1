@@ -5,7 +5,7 @@ import Image from "next/image";
 
 const Hero = () => {
   return (
-    <section className="Hero flex justify-center">
+    <section className="Hero h-screen flex justify-center">
       <div className="flex flex-col items-center">
         <Image src={Logo} alt="Logo"/>
         <Typewriter words={['developer', 'designer', 'programmer']}/>

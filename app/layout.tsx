@@ -3,7 +3,6 @@ import { Inter } from "next/font/google";
 import { Lora } from "next/font/google";
 import { Ubuntu } from "next/font/google";
 import "./globals.css";
-import Navbar from "@/components/Navbar";
 
 const inter = Inter({ subsets: ["latin"] });
 const ubuntu = Ubuntu({
@@ -30,9 +29,9 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${inter.className} ${lora.variable} ${ubuntu.variable} bg-background`}
+        className={`${inter.className} ${lora.variable} ${ubuntu.variable} bg-background no-scrollbar`}
       >
-        <Navbar />
+        
         {children}
       </body>
     </html>
